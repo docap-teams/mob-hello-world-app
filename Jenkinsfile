@@ -59,7 +59,7 @@ spec:
 // REMOVE THE COMMENT END (THE NEXT LINE)
 
 
-/*
+
     //Test goes here
     stage('Test') {
       parallel {
@@ -166,7 +166,7 @@ spec:
   } //parallel
 } //stage(test)
 
-*/
+
 
 /*
     //Coverage goes here
