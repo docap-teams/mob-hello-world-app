@@ -295,7 +295,7 @@ spec:
 
 /*
     //Deploy goes here
-    stage('Deploy to Production') {
+    stage('Deploy to Test') {
 
       environment {
         //put your credential identifier below in single quotes ''
@@ -332,7 +332,7 @@ spec:
           
           dir("hello-world-deployment") {
             //update the image to be the current build number from Jenkins
-            sh "cd prod && kustomize edit set image quay.io/[your_quay_account]/hello-world-app:${env.BUILD_ID}"
+            sh "cd test && kustomize edit set image quay.io/[your_quay_account]/hello-world-app:${env.BUILD_ID}"
             //and save it (or print "no changes")
             sh "git commit -am 'Publish new version' && git push || echo 'no changes'"
           }
